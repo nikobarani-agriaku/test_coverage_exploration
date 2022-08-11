@@ -13,9 +13,6 @@ jobs:
         with:
           channel: "stable"
       - uses: stelynx/dart-full-coverage@v1.0.5
-        with:
-          package: egakcap
-          ignore: "*_state.dart, do_not_import_me.dart"
       - run: flutter packages get
       - run: flutter test --coverage .
       - uses: codecov/codecov-action@v1.0.2
