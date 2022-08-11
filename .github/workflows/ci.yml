@@ -16,12 +16,9 @@ jobs:
         with:
           package: egakcap
           ignore: "*_state.dart, do_not_import_me.dart"
-      - run: flutter pub get
-      - run: flutter analyze
+      - run: flutter packages get
       - run: flutter test --coverage .
       - uses: codecov/codecov-action@v1.0.2
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
 
   # build: 
   #   runs-on: ubuntu-latest
